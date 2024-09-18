@@ -13,7 +13,7 @@ import sys
 CONFIG = os.getenv("CONFIG", "/etc/hdd-spindown.json")
 
 # Logging configuration
-logging.basicConfig(level=logging.DEBUG, format='[%(levelname)s] %(message)s')
+logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 logger = logging.getLogger('hdd-spindown')
 
 # Flag to indicate when to stop the loop
@@ -94,7 +94,7 @@ def main():
 
     # Devices are now a list of dictionaries with 'device' and 'timeout' keys
     devices = [(d['device'], d['timeout']) for d in config.get('CONF_DEV', [])]
-    interval = config.get('CONF_INT', 300)
+    interval = config.get('CONF_INT', 10)
     read_len = config.get('CONF_READLEN', 128)
     hosts = config.get('CONF_HOSTS', [])
 

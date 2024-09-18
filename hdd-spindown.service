@@ -1,0 +1,9 @@
+[Unit]
+Description=Automatic Disk Standby
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hdd-spindown.py
+
+[Install]
+WantedBy=multi-user.target

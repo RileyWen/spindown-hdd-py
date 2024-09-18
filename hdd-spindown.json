@@ -1,7 +1,7 @@
 {
     "CONF_DEV": [
-        {"device": "sdc", "timeout": 10},
-        {"device": "sdd", "timeout": 10}
+        {"device": "sdc", "timeout": 600},
+        {"device": "sdd", "timeout": 600}
     ],
     "CONF_HOSTS": [],
     "CONF_INT": 10,
